@@ -3,7 +3,7 @@ var readlineSync = require("readline-sync");
 var chalk =require("chalk");
 var score = 0;
 var userName = readlineSync.question(chalk.red("What is your name ? "));
-console.log(chalk.italic.blue("welcome " + userName + " Lets see How well you know about our country India."));
+console.log(chalk.italic.green("welcome " + userName + " Lets see How well you know about our country India."));
 
 var questions = [{
   question: "Who is prime Minister of India? ",
@@ -25,7 +25,7 @@ var questions = [{
 function play(question, answer) {
   var input = readlineSync.question(question)
   if (input.toUpperCase() === answer.toUpperCase()) {
-    console.log("You were Right!")
+    console.log("You were Right! & you can go ahead!")
     score++
   } else {
     console.log("you were Wrong :( ")
